@@ -27,11 +27,20 @@ void print_to_98(int num)
 	{
 		for (; num >= 98; num--)
 		{
-			_putchar((num / 10) + '0');
-			_putchar((num % 10) + '0');
+			if (num > 99)
+			{
+				_putchar((num / 100) + '0');
+				_putchar(((num / 10) % 10) + '0');
+				_putchar((nuum % 10) + '0');
+			}
+			else
+			{
+				_putchar((num / 10) + '0');
+				_putchar((num % 10) + '0');
+			}
 
 			if (num == 98)
-				continue;
+				break;
 			_putchar(',');
 			_putchar(' ');
 		}
