@@ -8,7 +8,7 @@
 
 int _islower(int c)
 {
-	if (char 'c' < 123 && char 'c' > 96)
+	if ((c + '0') < 123 && (c + '0') > 96)
 	{
 		return (1);
 	}
