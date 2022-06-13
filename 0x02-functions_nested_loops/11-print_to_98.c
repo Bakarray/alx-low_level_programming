@@ -31,7 +31,7 @@ void print_to_98(int num)
 			{
 				_putchar((num / 100) + '0');
 				_putchar(((num / 10) % 10) + '0');
-				_putchar((nuum % 10) + '0');
+				_putchar((num % 10) + '0');
 			}
 			else
 			{
