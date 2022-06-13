@@ -13,7 +13,8 @@ void print_to_98(int num)
 	{
 		for (; num <= 98; num++)
 		{
-			_putchar(num + '0');
+			_putchar((num / 10) + '0');
+			_putchar((num % 10) + '0');
 
 			if (num == 98)
 				break;
@@ -26,7 +27,8 @@ void print_to_98(int num)
 	{
 		for (; num >= 98; num--)
 		{
-			_putchar(num + '0');
+			_putchar((num / 10) + '0');
+			_putchar((num % 10) + '0');
 
 			if (num == 98)
 				continue;
