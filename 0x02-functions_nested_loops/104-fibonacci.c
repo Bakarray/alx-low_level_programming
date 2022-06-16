@@ -17,12 +17,12 @@ int main(void)
 	printf("%.0Lf, ", fib1);
 	printf("%.0Lf, ", fib2);
 
-	for (i = 3; i <= 97; i++)
+	for (i = 3; i <= 99; i++)
 	{
 		fibonacci = fib1 + fib2;
 		fib1 = fib2;
 		fib2 = fibonacci;
-		if (i == 97)
+		if (i == 99)
 			printf("%.0Lf\n", fibonacci);
 		else
 			printf("%.0Lf, ", fibonacci);
