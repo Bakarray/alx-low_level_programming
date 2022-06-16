@@ -16,8 +16,7 @@ int main(void)
 
 	for (i = 2; i <= 98; i++)
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-	ninety8 = fibonacci[98] + '0';
-	printf("%s", ninety8);
+	printf("%s", fibonacci[98]+'0');
 
 	return (0);
 }
