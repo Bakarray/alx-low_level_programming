@@ -13,6 +13,9 @@ int main(void)
 	long double fib1 = 1;
 	long double fib2 = 2;
 
+	printf("%Lf, ", fib1);
+	printf("%Lf, ", fib2);
+
 	for (i = 3; i <= 98; i++)
 	{
 		fibonacci = fib1 + fib2;
