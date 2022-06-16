@@ -15,7 +15,7 @@ int main(void)
 
 	for (i = 2; i <= 98; i++)
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-	printf("%lf", fibonacci[98]+'0');
+	printf("%Lf", fibonacci[98]);
 
 	return (0);
 }
