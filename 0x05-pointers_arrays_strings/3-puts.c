@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _puts - Write a function that prints a string, followed
@@ -12,7 +13,7 @@ void _puts(char *str)
 
 	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
+		printf(str[i]);
 		i++;
 	}
 	_putchar('\n');
