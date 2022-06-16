@@ -9,13 +9,20 @@
 int main(void)
 {
 	int i;
-	long double fibonacci[98];
-	fibonacci[0] = 1;
-	fibonacci[1] = 2;
+	long double fibonacci;
+	long double fib1 = 1;
+	long double fib2 = 2;
 
-	for (i = 2; i <= 98; i++)
-		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-	printf("%Lf", fibonacci[98]);
+	for (i = 3; i <= 98; i++)
+	{
+		fibonacci = fib1 + fib2;
+		fib1 = fib2;
+		fib2 = fibonacci;
+		if (i == 97)
+			printf("%Lf\n", fibonacci);
+		else
+			printf("%Lf, ", fibonacci);
+	}
 
 	return (0);
 }
