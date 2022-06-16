@@ -8,14 +8,16 @@
 
 int main(void)
 {
+	int i;
+	char ninety8;
 	long double fibonacci[98];
 	fibonacci[0] = 1;
 	fibonacci[1] = 2;
-	int i;
 
 	for (i = 2; i <= 98; i++)
 		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-	printf("%LF", fibonacci[98]);
+	ninety8 = fibonacci[98] + '0';
+	puts(ninety8);
 
 	return (0);
 }
