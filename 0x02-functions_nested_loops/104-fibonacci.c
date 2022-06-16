@@ -9,12 +9,14 @@
 int main(void)
 {
 	int i;
+
 	long double fibonacci;
+
 	long double fib1 = 1;
 	long double fib2 = 2;
 
-	printf("%Lf, ", fib1);
-	printf("%Lf, ", fib2);
+	printf("%.0Lf, ", fib1);
+	printf("%.0Lf, ", fib2);
 
 	for (i = 3; i <= 98; i++)
 	{
