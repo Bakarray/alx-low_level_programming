@@ -13,12 +13,12 @@ int main(void)
 	long double fib1 = 1;
 	long double fib2 = 2;
 
-	for (i = 3; i <= 97; i++)
+	for (i = 3; i <= 98; i++)
 	{
 		fibonacci = fib1 + fib2;
 		fib1 = fib2;
 		fib2 = fibonacci;
-		if (i == 97)
+		if (i == 98)
 			printf("%.0Lf\n", fibonacci);
 		else
 			printf("%.0Lf, ", fibonacci);
