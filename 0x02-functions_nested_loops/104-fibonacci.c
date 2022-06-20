@@ -10,12 +10,12 @@ int main(void)
 {
 	int i;
 
-	long double fibonacci;
-	long double fib1 = 1;
-	long double fib2 = 2;
+	unsigned long long int fibonacci;
+	unsigned long long int fib1 = 1;
+	unsigned long long int fib2 = 2;
 
-	printf("%.0Lf, ", fib1);
-	printf("%.0Lf, ", fib2);
+	printf("%llu, ", fib1);
+	printf("%llu, ", fib2);
 
 	for (i = 3; i <= 98; i++)
 	{
@@ -23,9 +23,9 @@ int main(void)
 		fib1 = fib2;
 		fib2 = fibonacci;
 		if (i == 98)
-			printf("%.0Lf\n", fibonacci);
+			printf("%llu\n", fibonacci);
 		else
-			printf("%.0Lf, ", fibonacci);
+			printf("%llu, ", fibonacci);
 	}
 
 	return (0);
