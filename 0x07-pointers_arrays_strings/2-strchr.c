@@ -11,7 +11,7 @@
 
 char *_strchr(char *s, char c)
 {
-	unsigned int i;
+	unsigned long int i;
 
 	for (i = 0; i < sizeof(s); i++)
 		if (c == s[i])
