@@ -3,6 +3,8 @@
 
 /**
  * main - prints the program name
+ * @argc: number of arguments passed to the program
+ * @argv: array of the arguments
  *
  * Return: 0 (Success)
  */
