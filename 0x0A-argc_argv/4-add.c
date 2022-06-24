@@ -3,32 +3,28 @@
 #include <ctype.h>
 
 /**
- * main - add positive numbers
- * @argc: argument to program count
- * @argv: an array of the arguments
- *
- * Return: 0 (Success) or 1 (non digit detected)
+ * main - A program that adds positive numbers
+ * @argc: The arguments' counter
+ * @argv: The argument's values
+ * Return: Always 0 (Success)
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int i, sum = 0;
+	int num, result = 0, i;
 
-	if (argc < 2)
+	while (argc-- > 1)
 	{
-		printf("%d\n", 0);
-		return (0);
-	}
-
-	for (i = 1; i < argc; i++)
-	{
-		if (isdigit(*argv[i]))
-			sum += atoi(argv[i]);
-		else
+		for (i = 0; argv[argc][i]; i++)
 		{
-			puts("Error");
-			return (1);
+			if (!(isdigit(argv[argc][i])))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
+		num = atoi(argv[argc]);
+		result += num;
 	}
-	printf("%d\n", sum);
+	printf("%d\n", result);
 	return (0);
 }
