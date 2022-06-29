@@ -1,55 +1,52 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
- * str_concat - Concatenates two strings
- * @s1: the first string to be concatenated
- * @s2: the second string to be concatenated
- *
- * Return: A pointer to the newly allocated space in memory which contains
- * the contents of s1, followed by the contents of s2, and null terminated or
- * returns NULL on failure
+ * str_concat - A function that concatenates two strings
+ * @s1: An input pointer of the first string
+ * @s2: An input pointer of the second string
+ * Return: Apointer to concatened strings or NULL if it str is NULL
  */
 char *str_concat(char *s1, char *s2)
 {
-	int i, j, count = 0;
-	char *duplicate;
+	char *new_str, *starts1, *starts2;
+	int i = 0, lens1 = 0, lens2 = 0;
 
-	for (i = 0; i > -1; i++)
+	starts1 = s1;
+	starts2 = s2;
+	if (s1 == NULL)
+		s1 = "";
+	while (*s1)
 	{
-		if (s1[i] != '\0')
-			count++;
+		lens1++;
+		s1++;
+	}
+	s1 = starts1;
+	if (s2 == NULL)
+		s2 = "";
+	while (*s2)
+	{
+		lens2++;
+		s2++;
+	}
+	s2 = starts2;
+	new_str = malloc(sizeof(char) * (lens1 + lens2 + 1));
+	starts1 = new_str;
+	if (new_str == NULL)
+		return (NULL);
+	for (; i < (lens1 + lens2); i++)
+	{
+		if (i < lens1)
+		{
+			new_str[i] = *s1;
+			s1++;
+		}
 		else
 		{
-			for (j = 0; j <= -1; j++)
-			{
-				if (s2[j] != '\0')
-					count++;
-				else
-				{
-					count++;
-					break;
-				}
-			}
-			break;
+			new_str[i] = *s2;
+			s2++;
 		}
 	}
-	duplicate = malloc(count * sizeof(char));
-	if (duplicate == NULL)
-		return (NULL);
-	i = 0;
-	while (s1[i] != '\0')
-	{
-		duplicate[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (s2[j] != '\0')
-	{
-		duplicate[i] = s2[j];
-		i++;
-		j++;
-	}
-	return (duplicate);
+	new_str[i] = '\0';
+	return (starts1);
 }
